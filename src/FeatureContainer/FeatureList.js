@@ -2,10 +2,10 @@ import React from 'react';
 import FeatureItem from './FeatureItem';
 
 function FeatureList(props) {
-    const features = Object.keys(props.features)
+    const features = Object.keys(props.features.features)
     .map(key => {
-        const options = props.features[key].map((item, index) => {
-            const selectedClass = item.name = props.features[key].name ? 'feature__selected' : '';
+        const options = props.features.features[key].map((item, index) => {
+            const selectedClass = item.name === props.features.features[key].name ? 'feature__selected' : '';
             const featureClass = 'feature__option ' + selectedClass;
             return (
 
