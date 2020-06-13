@@ -1,6 +1,7 @@
 import React from 'react';
 
 function Summary(props){
+  //console.log(props.selected)
   const summary = Object.keys(props.selected).map(key => (
     <div className="summary__option" key={key}>
         <div className="summary__option__label">{key}</div>

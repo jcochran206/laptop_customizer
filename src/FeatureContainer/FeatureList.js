@@ -2,9 +2,11 @@ import React from 'react';
 import FeatureItem from './FeatureItem';
 
 function FeatureList(props) {
-    const features = Object.keys(props.features.features)
-    .map(key => {
+    //console.log('outside maps', props)
+    const features = Object.keys(props.features.features).map(key => {
+        //console.log('first map', props.handleUpdate)
         const options = props.features.features[key].map((item, index) => {
+            //console.log('second map', props.handleUpdate)
             const selectedClass = item.name === props.features.features[key].name ? 'feature__selected' : '';
             const featureClass = 'feature__option ' + selectedClass;
             return (
@@ -12,7 +14,7 @@ function FeatureList(props) {
                 <FeatureItem
                     item={item}
                     key={item.name}
-                    feature={key}
+                    features={key}
                     handleUpdate={props.handleUpdate}
                     featureClass={featureClass}
                     />

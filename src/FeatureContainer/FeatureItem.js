@@ -1,7 +1,8 @@
 import React from 'react';
 
+
 export default function FeatureItem(props) {
-    
+    console.log(props.features)
     return (
 
         <div className='feature__item'>
@@ -11,7 +12,7 @@ export default function FeatureItem(props) {
                 name={props.feature}
                 className={props.featureClass}
                 checked={props.featureClass.includes('feature__selected') ? true : false }
-                onChange={e => props.handleUpdate(props.feature, props.item)}
+                onChange={e => props.handleUpdate(props.features, props.item)}
                 />
 
             <label htmlFor={props.item.name} className='feature__label' >

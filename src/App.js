@@ -32,15 +32,17 @@ class App extends Component {
   }
 
   updateFeature(feature, newValue) {
+    console.log(feature, newValue)
     const selected = Object.assign({}, this.state.selected);
     selected[feature] = newValue;
+    console.log(selected)
     this.setState({
       selected
     });
   }
 
   render() {
-    // console.log(this.state)
+    //console.log(this.state.selected)
     return (
       <div className="App">
         <Header />
